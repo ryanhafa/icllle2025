@@ -52,6 +52,9 @@ body {
             display: none;
         }
         #scrollUpBtn {
-            background-color: #053946;
+            background-color: #ffab3d;
         }
-
+        .inline-block {
+            width: 200px;
+            height: 150px;
+        }
