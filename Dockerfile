@@ -1,10 +1,20 @@
 FROM node:18-alpine
 
+# Set working dir
 WORKDIR /app
-COPY . .
 
+# Copy package files & install dependencies
+COPY package*.json ./
 RUN npm install
 
+# Copy all source files
+COPY . .
+
+# Build Tailwind output.css
+RUN npm run build:css
+
+# Expose app on port 3000
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+# Start the server
+CMD ["npm", "start"]
