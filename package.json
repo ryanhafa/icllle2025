@@ -19,5 +19,8 @@
     "url": "https://github.com/ryanhafa/icllle2025/issues"
   },
   "homepage": "https://github.com/ryanhafa/icllle2025#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11"
+  }
 }
