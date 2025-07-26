@@ -20,7 +20,7 @@
 <header class="accent-bg text-white sticky top-0 z-50 shadow-lg">
     <div class="container mx-auto flex justify-between items-center p-4">
         <a href="#home" class="flex items-center space-x-2">
-            <img src="img/icllle-lagi.png" alt="ICLLLE Logo" class="h-10 w-auto">
+            <img src="/img/icllle-lagi.png" alt="ICLLLE Logo" class="h-10 w-auto">
         </a>
         <nav class="hidden md:flex space-x-6">
             <a href="#home" class="nav-link">Home</a>
@@ -37,7 +37,7 @@
 </header>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden accent-bg">
+        <div id="mobile-menu" class="md:hidden accent-bg text-white">
             <a href="#home" class="block p-4 text-center nav-link">Home</a>
             <a href="#call-for-papers" class="block p-4 text-center nav-link">Call For Papers</a>
             <a href="#speakers" class="block p-4 text-center nav-link">Speakers</a>
@@ -50,9 +50,9 @@
 
 <!-- Herro Section -->
 <section id="home"
-  class="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-none md:bg-[url('img/bannerv2.jpg')] bg-center bg-cover flex items-center justify-center text-center overflow-hidden">
+  class="relative w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center text-center overflow-hidden">
   <!-- Overlay -->
-  <div class="absolute inset-0 accent-bg bg-opacity-40 md:bg-opacity-40"></div>
+  <div class="absolute inset-0 bg-slate-950 md:bg-[url('/img/bannerv2.jpg')] bg-center bg-cover md:bg-opacity-40"></div>
 
   <!-- Konten teks -->
   <div class="relative z-10 max-w-3xl p-6">
@@ -349,5 +349,13 @@
     });
 </script>
  <script src="js/script.js"></script>
+<script>
+  window.addEventListener('pageshow', function (event) {
+    const iframe = document.getElementById("pdf-frame");
+    iframe.src = iframe.src; // reload PDF
+  });
+</script>
+
+
 </body>
 </html>
